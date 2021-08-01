@@ -1,8 +1,9 @@
 import app from './app'
+import {startConnection} from './config/database'
 
 async function main(){
+    startConnection();
     await app.listen(app.get('port'));
-    console.log('Gordo Valle Cabro')
     console.log('Server on port', app.get('port'))
 }
 
